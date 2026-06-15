@@ -1,0 +1,31 @@
+name: Deploy web app to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Publish application
+        run: dotnet publish -c Release -o release
+
+      - name: Add .nojekyll file
+        run: touch release/wwwroot/.nojekyll
+
+      - name: Copy index.html to 404.html
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+      - name: Commit and Push to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: release/wwwroot
