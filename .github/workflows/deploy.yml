@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Give the workflow write permissions to push to the gh-pages branch
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Publish application
-        run: dotnet publish -c Release -o release
+        run: dotnet publish PortfolioWeb.csproj -c Release -o release
 
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
