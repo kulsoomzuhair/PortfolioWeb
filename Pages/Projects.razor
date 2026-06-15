@@ -314,7 +314,7 @@
             <button class="video-modal-close" @onclick="CloseModal" aria-label="Close">
                 <i class="bi bi-x-lg"></i>
             </button>
-            <video src="@activeVideoUrl" controls autoplay class="w-100 h-100"></video>
+            <video @key="activeVideoUrl" src="@activeVideoUrl" controls autoplay class="w-100 h-100"></video>
         </div>
     </div>
 }
