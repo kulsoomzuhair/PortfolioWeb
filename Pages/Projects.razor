@@ -17,13 +17,10 @@
         <!-- Project 1: Surveillance Tracking -->
         <div class="col">
             <div class="card h-100 border-0 overflow-hidden">
-                <!-- Bootstrap Carousel -->
+                <!-- Bootstrap Carousel (Images Only) -->
                 <div id="carouselSurveillance" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="4000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <video src="images/surviliance/projectvideo/SurveillanceProject.mp4" controls preload="metadata"></video>
-                        </div>
-                        <div class="carousel-item">
                             <img src="images/surviliance/Screenshot 2025-03-20 160220.png" alt="Surveillance Tracking System Screenshot 1" />
                         </div>
                         <div class="carousel-item">
@@ -64,10 +61,17 @@
                             <li>Built-in validation for safety basis-related fields.</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="tech-pill">Blazor (.NET 8)</span>
-                        <span class="tech-pill">Clean Architecture</span>
-                        <span class="tech-pill">SQL Server</span>
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <span class="tech-pill">Blazor (.NET 8)</span>
+                            <span class="tech-pill">Clean Architecture</span>
+                            <span class="tech-pill">SQL Server</span>
+                        </div>
+                        <button class="btn btn-outline-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2" 
+                                @onclick='() => OpenVideoModal("images/surviliance/projectvideo/SurveillanceProject.mp4")'>
+                            <i class="bi bi-play-circle-fill"></i>
+                            <span>Watch Demo Video</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -135,13 +139,10 @@
         <!-- Project 3: Blazor Ecommerce -->
         <div class="col">
             <div class="card h-100 border-0 overflow-hidden">
-                <!-- Bootstrap Carousel -->
+                <!-- Bootstrap Carousel (Images Only) -->
                 <div id="carouselEcommerce" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="4000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <video src="images/ECommerce/ProjectVideo/EcommerceProject.mp4" controls preload="metadata"></video>
-                        </div>
-                        <div class="carousel-item">
                             <img src="images/ECommerce/Screenshot 2025-07-22 103041.png" alt="Ecommerce Screenshot 1" />
                         </div>
                         <div class="carousel-item">
@@ -179,10 +180,17 @@
                             <li>Mock payment integration for seamless checkout simulation.</li>
                         </ul>
                     </div>
-                    <div>
-                        <span class="tech-pill">Blazor (.NET 9)</span>
-                        <span class="tech-pill">C# 13</span>
-                        <span class="tech-pill">ASP.NET Core Identity</span>
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <span class="tech-pill">Blazor (.NET 9)</span>
+                            <span class="tech-pill">C# 13</span>
+                            <span class="tech-pill">ASP.NET Core Identity</span>
+                        </div>
+                        <button class="btn btn-outline-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2" 
+                                @onclick='() => OpenVideoModal("images/ECommerce/ProjectVideo/EcommerceProject.mp4")'>
+                            <i class="bi bi-play-circle-fill"></i>
+                            <span>Watch Demo Video</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -191,24 +199,9 @@
         <!-- Project 4: VigilancePro -->
         <div class="col">
             <div class="card h-100 border-0 overflow-hidden">
-                <!-- Bootstrap Carousel -->
-                <div id="carouselVigilance" class="carousel slide card-carousel" data-bs-ride="carousel" data-bs-interval="4000">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <video src="images/VigilianceProCase/ProjectVideo/Screen Recording 2026-06-13 123628.mp4" controls preload="metadata"></video>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/VigilianceProCase/VigilanceProCase-Cover.jpg" alt="VigilancePro Case Management Cover" />
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselVigilance" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselVigilance" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                <!-- Cover Image (Static - No Carousel needed since it's 1 image) -->
+                <div class="card-carousel">
+                    <img src="images/VigilianceProCase/VigilanceProCase-Cover.jpg" class="w-100 h-100" style="object-fit: cover;" alt="VigilancePro Case Management Cover" />
                 </div>
 
                 <div class="card-body p-4 d-flex flex-column justify-content-between">
@@ -232,10 +225,17 @@
                             <span class="tech-pill">Modular Monolith</span>
                             <span class="tech-pill">Entity Framework</span>
                         </div>
-                        <a href="https://github.com/kulsoomzuhair/VigilancePro-Case" target="_blank" class="btn btn-outline-secondary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
-                            <i class="bi bi-github"></i>
-                            <span>View Source Code</span>
-                        </a>
+                        <div class="d-flex flex-column gap-2">
+                            <button class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2" 
+                                    @onclick='() => OpenVideoModal("images/VigilianceProCase/ProjectVideo/Screen Recording 2026-06-13 123628.mp4")'>
+                                <i class="bi bi-play-circle-fill"></i>
+                                <span>Watch Demo Video</span>
+                            </button>
+                            <a href="https://github.com/kulsoomzuhair/VigilancePro-Case" target="_blank" class="btn btn-outline-secondary w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-github"></i>
+                                <span>View Source Code</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,3 +305,33 @@
         <a href="contact" class="btn btn-primary btn-lg px-5 py-3">Start a Project Today</a>
     </div>
 </div>
+
+<!-- Premium Video Modal Popup Overlay -->
+@if (isModalOpen)
+{
+    <div class="video-modal-backdrop" @onclick="CloseModal">
+        <div class="video-modal-content" @onclick:stopPropagation>
+            <button class="video-modal-close" @onclick="CloseModal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <video src="@activeVideoUrl" controls autoplay class="w-100 h-100"></video>
+        </div>
+    </div>
+}
+
+@code {
+    private bool isModalOpen = false;
+    private string activeVideoUrl = string.Empty;
+
+    private void OpenVideoModal(string videoUrl)
+    {
+        activeVideoUrl = videoUrl;
+        isModalOpen = true;
+    }
+
+    private void CloseModal()
+    {
+        isModalOpen = false;
+        activeVideoUrl = string.Empty;
+    }
+}
