@@ -1,0 +1,21 @@
+## Ignore Visual Studio Temporary Files and Build Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Re]leases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Log]/
+[Ll]og/
+
+# Visual Studio Virtual Folder Layout
+.vs/
+
+# JetBrains Rider
+.idea/
+*.user
