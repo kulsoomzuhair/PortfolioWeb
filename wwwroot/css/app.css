@@ -273,14 +273,23 @@ main {
     position: relative;
 }
 
-.carousel-item img, .carousel-item video {
+.carousel-item img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
+.carousel-item video {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background-color: #000000;
+}
+
 .carousel-control-prev, .carousel-control-next {
     width: 12%;
+    height: 70%;
+    top: 15%;
     opacity: 0.7;
     transition: opacity 0.2s ease;
     z-index: 5;
